@@ -1,0 +1,21 @@
+#Author Aravind Srinivas
+#Test Dockerfile for ansible
+
+FROM ubuntu:16.04
+RUN apt-get update && apt-get install -y --no-install-recommends \
+ curl \
+ apt-utils \
+ net-tools \
+ ethtool \
+ git \
+ vim \
+ python-pip \
+ iputils-ping \
+ ssh \
+ software-properties-common \
+ ansible
+
+#install packages specific for Junos
+RUN pip install --upgrade pip
+RUN pip install junos-eznc
+RUN echo “completed”
