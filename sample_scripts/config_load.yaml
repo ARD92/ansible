@@ -1,0 +1,23 @@
+---
+- name: config device
+  hosts:
+    - all
+  gather_facts: no
+  
+  connection: local
+
+  tasks:
+    - name: configure device
+      junos_config:
+        src_format: set
+        lines:
+          - 'set routing-options static route 1.1.1.2/32 next-hop 7.7.7.7'
+        update: merge
+
+      register: junos_result
+    - name: print response
+      debug:
+        var: junos_result 
+
+
+
