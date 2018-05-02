@@ -17,7 +17,7 @@ inventory = hosts
 host_key_checking = False
 ```
 
-###hosts
+### hosts
 ```
 vim hosts
 
@@ -32,7 +32,7 @@ groups can be added using the format
 99.99.99.7
 ```
 
-###playbooks
+### Playbooks
 refer the sample scripts
 
 ### Run the playbook 
